@@ -4,7 +4,7 @@
 //      $(document).on("parent-scroll", function(event, data) {
 //          console.log("Received parent-scroll event: ", data);
 //      });
-(function() {
+(function($) {
     if (window.parent) {
         var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
         var eventer = window[eventMethod];
@@ -19,4 +19,4 @@
             }
         }, false);
     }
-})();
+})(jQuery);
